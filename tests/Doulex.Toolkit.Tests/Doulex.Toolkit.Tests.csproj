@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Doulex.Toolkits\Doulex.Toolkit.csproj" />
+      <ProjectReference Include="..\..\src\Doulex.Toolkit\Doulex.Toolkit.csproj" />
     </ItemGroup>
 
 </Project>
