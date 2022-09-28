@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <PackageId>$(AssemblyName)</PackageId>
+        <Title>A useful toolkit for dev</Title>
+        <Authors>Nepton Liu</Authors>
+        <Company />
+        <IncludeSymbols>True</IncludeSymbols>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Maps" />
+    </ItemGroup>
+
+</Project>
