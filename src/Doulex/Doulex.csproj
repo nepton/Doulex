@@ -14,8 +14,4 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Maps" />
-    </ItemGroup>
-
 </Project>
