@@ -1,14 +1,15 @@
-﻿namespace Doulex;
-
-public static class BooleanExtensions
+﻿namespace Doulex
 {
-    /// <summary>
-    /// 把布尔值转换为整形数, 用来累加成功数量使用
-    /// </summary>
-    /// <param name="value"></param>
-    /// <returns></returns>
-    public static int ToInt32(this bool value)
+    public static class BooleanExtensions
     {
-        return value ? 1 : 0;
+        /// <summary>
+        /// 把布尔值转换为整形数, 用来累加成功数量使用
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static int ToInt32(this bool value)
+        {
+            return value ? 1 : 0;
+        }
     }
 }

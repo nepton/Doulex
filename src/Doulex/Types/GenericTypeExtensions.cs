@@ -1,35 +1,36 @@
-﻿namespace Doulex.Types;
-
-/// <summary>
-/// The extension of generic type
-/// </summary>
-public static class GenericTypeExtensions
+﻿namespace Doulex.Types
 {
     /// <summary>
-    /// Get the name of generic type
-    /// the format of result like this <![CDATA[Test<int,string>]]>
+    /// The extension of generic type
     /// </summary>
-    /// <param name="type"></param>
-    /// <returns>Return the type of generic type</returns>
-    public static string GetGenericTypeName(this Type type)
+    public static class GenericTypeExtensions
     {
-        string typeName;
-
-        if (type.IsGenericType)
+        /// <summary>
+        /// Get the name of generic type
+        /// the format of result like this <![CDATA[Test<int,string>]]>
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns>Return the type of generic type</returns>
+        public static string GetGenericTypeName(this Type type)
         {
-            var genericTypes = string.Join(",", type.GetGenericArguments().Select(t => t.Name).ToArray());
-            typeName = $"{type.Name.Remove(type.Name.IndexOf('`'))}<{genericTypes}>";
+            string typeName;
+
+            if (type.IsGenericType)
+            {
+                var genericTypes = string.Join(",", type.GetGenericArguments().Select(t => t.Name).ToArray());
+                typeName = $"{type.Name.Remove(type.Name.IndexOf('`'))}<{genericTypes}>";
+            }
+            else
+            {
+                typeName = type.Name;
+            }
+
+            return typeName;
         }
-        else
+
+        public static string GetGenericTypeName(this object @object)
         {
-            typeName = type.Name;
+            return @object.GetType().GetGenericTypeName();
         }
-
-        return typeName;
-    }
-
-    public static string GetGenericTypeName(this object @object)
-    {
-        return @object.GetType().GetGenericTypeName();
     }
 }

@@ -1,11 +1,12 @@
-﻿namespace Doulex.Text;
-
-public enum CasingStyle
+﻿namespace Doulex.Text
 {
-    None,
-    Sentence,
-    Camel,
-    Pascal,
-    Snake,
-    Kebab
+    public enum CasingStyle
+    {
+        None,
+        Sentence,
+        Camel,
+        Pascal,
+        Snake,
+        Kebab
+    }
 }

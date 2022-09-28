@@ -1,41 +1,42 @@
 ﻿using System.Xml;
 using System.Xml.Serialization;
 
-namespace Doulex.Xml;
-
-/// <summary>
-/// XML Convert
-/// </summary>
-public class XmlConverter
+namespace Doulex.Xml
 {
     /// <summary>
-    /// 解析xml字符串, 转换为对象
+    /// XML Convert
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="xml"></param>
-    /// <returns></returns>
-    public static T? Deserialize<T>(string xml)
+    public class XmlConverter
     {
-        if (xml == null)
-            throw new ArgumentNullException(nameof(xml));
+        /// <summary>
+        /// 解析xml字符串, 转换为对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="xml"></param>
+        /// <returns></returns>
+        public static T? Deserialize<T>(string xml)
+        {
+            if (xml == null)
+                throw new ArgumentNullException(nameof(xml));
 
-        var doc = new XmlDocument();
-        doc.LoadXml(xml);
+            var doc = new XmlDocument();
+            doc.LoadXml(xml);
 
-        return Deserialize<T>(doc);
-    }
+            return Deserialize<T>(doc);
+        }
 
-    /// <summary>
-    /// 通过 XML Document 解析至对象
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="doc"></param>
-    /// <returns></returns>
-    public static T? Deserialize<T>(XmlDocument doc)
-    {
-        var root       = new XmlRootAttribute(doc.DocumentElement?.Name ?? "");
-        var serializer = new XmlSerializer(typeof(T), root);
+        /// <summary>
+        /// 通过 XML Document 解析至对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="doc"></param>
+        /// <returns></returns>
+        public static T? Deserialize<T>(XmlDocument doc)
+        {
+            var root       = new XmlRootAttribute(doc.DocumentElement?.Name ?? "");
+            var serializer = new XmlSerializer(typeof(T), root);
 
-        return (T?) serializer.Deserialize(new XmlNodeReader(doc));
+            return (T?) serializer.Deserialize(new XmlNodeReader(doc));
+        }
     }
 }

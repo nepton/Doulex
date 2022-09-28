@@ -1,21 +1,22 @@
-﻿namespace Doulex.Text;
-
-public static class CasingConverter
+﻿namespace Doulex.Text
 {
-    public static string Convert(string source, CasingStyle targetStyle)
+    public static class CasingConverter
     {
-        if (source == null)
-            throw new ArgumentNullException(nameof(source));
-
-        return targetStyle switch
+        public static string Convert(string source, CasingStyle targetStyle)
         {
-            CasingStyle.None => source,
-            CasingStyle.Sentence => source.ExpandToSentenceCase(),
-            CasingStyle.Camel => source.ToCamelCase(),
-            CasingStyle.Pascal => source.ToPascalCase(),
-            CasingStyle.Snake => source.ToSnakeCase(),
-            CasingStyle.Kebab => source.ToKebabCase(),
-            _ => throw new ArgumentOutOfRangeException(nameof(targetStyle))
-        };
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            return targetStyle switch
+            {
+                CasingStyle.None     => source,
+                CasingStyle.Sentence => source.ExpandToSentenceCase(),
+                CasingStyle.Camel    => source.ToCamelCase(),
+                CasingStyle.Pascal   => source.ToPascalCase(),
+                CasingStyle.Snake    => source.ToSnakeCase(),
+                CasingStyle.Kebab    => source.ToKebabCase(),
+                _                    => throw new ArgumentOutOfRangeException(nameof(targetStyle))
+            };
+        }
     }
 }
