@@ -1,4 +1,4 @@
-﻿namespace Doulex.Types
+﻿namespace Doulex
 {
     /// <summary>
     /// The extension of generic type
