@@ -1,23 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageId>Doulex</PackageId>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <TreatSpecificWarningsAsErrors />
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>
+        <VersionPrefix>1.1.0</VersionPrefix>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <Description>Useful toolkit for dev</Description>
-        <VersionPrefix>1.0.2</VersionPrefix>
         <PackageTags>toolkit;tool;utility</PackageTags>
         <PackageIcon>icon.png</PackageIcon>
         <PackageProjectUrl>https://github.com/nepton/doulex</PackageProjectUrl>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-        <PackageId>$(AssemblyName)</PackageId>
         <Authors>Nepton Liu</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IncludeSymbols>True</IncludeSymbols>

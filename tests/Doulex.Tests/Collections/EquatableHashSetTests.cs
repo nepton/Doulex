@@ -1,6 +1,6 @@
 ﻿using Doulex.Collections;
 
-namespace Hertz.Tests.Collections;
+namespace Doulex.Tests.Collections;
 
 /// <summary>
 /// This class is used to test class EquatableHashSet. 

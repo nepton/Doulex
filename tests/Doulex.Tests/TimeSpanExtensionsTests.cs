@@ -1,6 +1,4 @@
-﻿using Doulex;
-
-namespace Hertz.Tests.DateTimes;
+﻿namespace Doulex.Tests;
 
 /// <summary>
 /// 测试 TimeSpanExtensions, 确保返回正确的值
