@@ -1,4 +1,4 @@
-﻿using Hertz.Collections;
+﻿using Doulex.Collections;
 
 namespace Hertz.Tests.Collections;
 

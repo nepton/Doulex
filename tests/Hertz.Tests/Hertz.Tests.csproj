@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Hertz\Hertz.csproj" />
+      <ProjectReference Include="..\..\src\Doulex\Doulex.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using Hertz.Types;
+﻿using Doulex.Types;
 
 // ReSharper disable UnusedTypeParameter
 

@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <TreatSpecificWarningsAsErrors />
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>Useful toolkit for dev</Description>
+        <VersionPrefix>1.0.2</VersionPrefix>
+        <PackageTags>toolkit;tool;utility</PackageTags>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageProjectUrl>https://github.com/nepton/doulex</PackageProjectUrl>
+        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+        <PackageId>$(AssemblyName)</PackageId>
+        <Authors>Nepton Liu</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IncludeSymbols>True</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <!--DEBUG无需发布, 解决保存问题-->
+        <NuGetPublishLocation>.</NuGetPublishLocation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <NuGetPublishType>remote</NuGetPublishType>
+        <NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SS.NuGet.Publish" Version="1.0.1912.22">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

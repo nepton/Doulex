@@ -1,4 +1,6 @@
-﻿namespace Hertz.Tests.DateTimes;
+﻿using Doulex;
+
+namespace Hertz.Tests.DateTimes;
 
 public class DateTimeExtensionsTests
 {
