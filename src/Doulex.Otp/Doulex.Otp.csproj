@@ -2,17 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>Doulex</PackageId>
-        <VersionPrefix>1.1.0</VersionPrefix>
-        <Description>Useful toolkit for dev</Description>
-        <PackageTags>toolkit;tool;utility</PackageTags>
+        <PackageId>Doulex.Otp</PackageId>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <Description>Generate a one time password based on RFC6238</Description>
+        <PackageTags>otp;password;verification;code</PackageTags>
         <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
@@ -43,7 +42,14 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="icon.png" Pack="true" PackagePath="\"/>
+      <Folder Include="Hotp" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>true</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

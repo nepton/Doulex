@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.Sms.Abstractions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.Sms.Aliyun", "src\Doulex.Sms.Aliyun\Doulex.Sms.Aliyun.csproj", "{5D69BA1A-B4D7-4107-BC0C-47C49E311A8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.Otp", "src\Doulex.Otp\Doulex.Otp.csproj", "{970FE11E-E9F2-4113-86D1-6B83A7A03104}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{5D69BA1A-B4D7-4107-BC0C-47C49E311A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D69BA1A-B4D7-4107-BC0C-47C49E311A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D69BA1A-B4D7-4107-BC0C-47C49E311A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970FE11E-E9F2-4113-86D1-6B83A7A03104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970FE11E-E9F2-4113-86D1-6B83A7A03104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970FE11E-E9F2-4113-86D1-6B83A7A03104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970FE11E-E9F2-4113-86D1-6B83A7A03104}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{6A23FEE6-66C5-430C-8531-751FFECC6136} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
 		{FA82C172-F4B6-4E82-B43D-FF63FA90A6DB} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
 		{5D69BA1A-B4D7-4107-BC0C-47C49E311A8B} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
+		{970FE11E-E9F2-4113-86D1-6B83A7A03104} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CA6DE1A-C1A0-4BE1-B7BF-D3052CD20581}
