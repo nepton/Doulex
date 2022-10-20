@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5309EC62-08D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D89EE3E4-AABD-439A-A3CB-8EDA27EA32B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.Tests", "tests\Doulex.Tests\Doulex.Tests.csproj", "{21BF4ABB-D84B-4E1D-91E0-C873484FEF13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Doulex", "tests\UnitTest.Doulex\UnitTest.Doulex.csproj", "{21BF4ABB-D84B-4E1D-91E0-C873484FEF13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

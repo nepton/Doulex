@@ -1,4 +1,6 @@
-﻿namespace Doulex.Tests;
+﻿using Doulex;
+
+namespace UnitTest.Doulex;
 
 /// <summary>
 /// 测试 TimeSpanExtensions, 确保返回正确的值

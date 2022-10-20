@@ -1,4 +1,6 @@
-﻿namespace Doulex.Tests;
+﻿using Doulex;
+
+namespace UnitTest.Doulex;
 
 public class DateTimeExtensionsTests
 {

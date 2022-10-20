@@ -2,7 +2,9 @@
 
 // ReSharper disable UnusedTypeParameter
 
-namespace Doulex.Tests.Generic;
+using Doulex;
+
+namespace UnitTest.Doulex.Generic;
 
 public class GenericTypeExtensionsTests
 {

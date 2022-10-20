@@ -1,6 +1,6 @@
 ﻿using Doulex.Collections;
 
-namespace Doulex.Tests.Collections;
+namespace UnitTest.Doulex.Collections;
 
 /// <summary>
 /// This class is used to test class EquatableHashSet. 
