@@ -1,4 +1,5 @@
-﻿namespace Doulex
+﻿#if NETSTANDARD2_1_OR_GREATER
+namespace Doulex
 {
     /// <summary>
     /// IMemoryBuffer 比 IMemoryOwner 提供更多的租用内存的信息, 和内存的使用情况
@@ -54,3 +55,4 @@
         Memory<byte> Allocate(int length);
     }
 }
+#endif

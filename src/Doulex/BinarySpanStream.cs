@@ -1,4 +1,6 @@
-﻿using System.Buffers.Binary;
+﻿#if NETSTANDARD2_1_OR_GREATER
+
+using System.Buffers.Binary;
 
 namespace Doulex
 {
@@ -51,3 +53,4 @@ namespace Doulex
         }
     }
 }
+#endif

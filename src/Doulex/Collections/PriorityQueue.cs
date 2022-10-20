@@ -1,4 +1,5 @@
-﻿namespace Doulex.Collections
+﻿#if NETSTANDARD2_1_OR_GREATER
+namespace Doulex.Collections
 {
     /// <summary>
     /// Priority Queue
@@ -134,3 +135,4 @@
         }
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System.Buffers;
+﻿#if NETSTANDARD2_1_OR_GREATER
+using System.Buffers;
 using System.Runtime.CompilerServices;
 
 namespace Doulex
@@ -109,3 +110,4 @@ namespace Doulex
         }
     }
 }
+#endif

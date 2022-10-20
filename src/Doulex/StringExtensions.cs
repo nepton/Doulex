@@ -22,7 +22,7 @@
         /// <returns>True 有效</returns>
         public static bool IsFileName(this string str)
         {
-            char[] ivn = System.IO.Path.GetInvalidFileNameChars();
+            char[] ivn = Path.GetInvalidFileNameChars();
             foreach (char x in ivn)
             {
                 if (str.Contains(x))
@@ -43,7 +43,7 @@
             if (string.IsNullOrEmpty(source))
                 return defaultValue;
 
-            return source;
+            return source!;
         }
 
         /// <summary>

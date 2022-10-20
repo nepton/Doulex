@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -10,40 +10,22 @@
 
     <PropertyGroup>
         <PackageId>Doulex</PackageId>
-        <VersionPrefix>1.1.0</VersionPrefix>
+        <VersionPrefix>1.1.1</VersionPrefix>
+        <Authors>Nepton Liu</Authors>
         <Description>Useful toolkit for dev</Description>
         <PackageTags>toolkit;tool;utility</PackageTags>
-        <PackageIcon>icon.png</PackageIcon>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <PackageProjectUrl>https://github.com/nepton/doulex</PackageProjectUrl>
-        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-        <Authors>Nepton Liu</Authors>
+        <PackageIcon>app.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-        <!--DEBUG无需发布, 解决保存问题-->
-        <NuGetPublishLocation>.</NuGetPublishLocation>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-        <NuGetPublishType>remote</NuGetPublishType>
-        <NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="SS.NuGet.Publish" Version="1.0.1912.22">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="icon.png" Pack="true" PackagePath="\" />
+        <None Include="app.png" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
