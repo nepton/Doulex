@@ -10,7 +10,7 @@
 
     <PropertyGroup>
         <PackageId>Doulex</PackageId>
-        <VersionPrefix>1.1.1</VersionPrefix>
+        <VersionPrefix>1.1.2</VersionPrefix>
         <Authors>Nepton Liu</Authors>
         <Description>Useful toolkit for dev</Description>
         <PackageTags>toolkit;tool;utility</PackageTags>
