@@ -10,22 +10,34 @@
 
     <PropertyGroup>
         <PackageId>Doulex</PackageId>
-        <VersionPrefix>1.1.2</VersionPrefix>
-        <Authors>Nepton Liu</Authors>
         <Description>Useful toolkit for dev</Description>
         <PackageTags>toolkit;tool;utility</PackageTags>
-        <PackageProjectUrl>https://github.com/nepton/doulex</PackageProjectUrl>
-        <PackageIcon>app.png</PackageIcon>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/nepton/Doulex</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nepton/Doulex.git</RepositoryUrl>
 
+        <Authors>Nepton Liu</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(APPVEYOR)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
     <ItemGroup>
-        <None Include="app.png" Pack="true" PackagePath="\" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
