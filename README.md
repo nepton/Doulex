@@ -1,4 +1,5 @@
-# Doulex.DistributedCache
+# Doulex
+
 [![Build status](https://ci.appveyor.com/api/projects/status/iam1vifuu1aqp58e?svg=true)](https://ci.appveyor.com/project/nepton/doulex-xpqy7)
 ![GitHub issues](https://img.shields.io/github/issues/nepton/Doulex.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nepton/Doulex/blob/master/LICENSE)  
