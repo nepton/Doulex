@@ -6,6 +6,18 @@
     public static class DoubleExtensions
     {
         /// <summary>
+        /// Check if the double is between two values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="epsilon"></param>
+        /// <returns></returns>
+        public static bool AlmostEqual(this double a, double b, double epsilon = 0.0000001)
+        {
+            return Math.Abs(a - b) < epsilon;
+        }
+
+        /// <summary>
         /// 如果是 NaN 则替换为默认值
         /// </summary>
         /// <param name="source"></param>

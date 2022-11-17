@@ -1,8 +1,9 @@
-version: 1.1.{build}
+version: '{build}'
 
 image: Visual Studio 2022
 
 environment:
+  VERSION: 1.1.4
   TARGET_CONFIGURATION: Release
 
 platform: Any CPU
@@ -12,9 +13,7 @@ branches:
     - master
 
 only_commits:
-  message: /build/
-#  files:
-#    - src/*
+  message: /(build|deploy|publish)/
 
 before_build:
 - cmd: >-
@@ -24,7 +23,7 @@ before_build:
 
 build_script:
 - cmd: >-
-    dotnet pack .\src\Doulex -c %TARGET_CONFIGURATION% -p:VersionPrefix=%APPVEYOR_BUILD_VERSION% 
+    dotnet pack .\src\Doulex -c %TARGET_CONFIGURATION% -p:VersionPrefix=%VERSION% 
 
 artifacts:
   - path: "src/**/*.nupkg"
