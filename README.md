@@ -16,6 +16,40 @@ Doulex is a toolkits for daily devs.
 
 ### Basic usage
 
+#### ObjectExtensions.RemoveNullProperty
+RemoveNullProperty can remove null property from object.
+
+```csharp
+var origin = new
+{
+    Name    = "John",
+    Age     = 30,
+    Address = (string?) null,
+    Married = (bool?) null,
+};
+var newDynamic = origin.RemoveNullProperty();
+
+// we got a new dynamic object without null property
+// {
+//     Name = "John",
+//     Age = 30,
+// }
+```
+
+#### DisposeTracking
+DisposeTracking can let you make call when object is out of scope.
+
+```csharp
+var obj = 100; // your object
+using (var tracker = new DisposeTracking(obj, () => Console.WriteLine("Object is disposed.")))
+{
+    Console.WriteLine(tracker);     // output is 100
+    // do something else
+}
+// output is "Object is disposed."
+```
+
+#### DoubleExtensions.AlmostEquals
 Compare double values with a tolerance
 
 ```csharp

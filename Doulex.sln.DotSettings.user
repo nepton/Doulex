@@ -6,14 +6,21 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3e0c4e04_002D6f9b_002D4939_002Db69e_002D0fb6845e38fc/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="3" Name="All tests from &amp;lt;tests&amp;gt;\&amp;lt;Doulex.Toolkit.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="D:\Project\Doulex\Doulex.Toolkits\tests\Doulex.Toolkit.Tests" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;Doulex.Toolkit.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba63774f_002D2b33_002D4d36_002Dbf2c_002Ddd3e2a03c98e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestAlmostEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba63774f_002D2b33_002D4d36_002Dbf2c_002Ddd3e2a03c98e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAlmostEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DoubleExtensionsTester.TestAlmostEqual&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestAsyncDisposable&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestDisposeMoreThanOnce&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestDisposeInSubFunction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestDisposeInSyncSubFunction&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.ObjectExtensionsTests.RemoveNullPropertyTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5d9775d_002D64b0_002D4808_002Da007_002Dcf00fd8e1be8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAlmostEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5d9775d_002D64b0_002D4808_002Da007_002Dcf00fd8e1be8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestAlmostEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DoubleExtensionsTester.TestAlmostEqual&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestSyncedDisposable&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FDoulex_002EPinyin_002FPinyinResource/@EntryIndexedValue">True</s:Boolean>
