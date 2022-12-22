@@ -74,8 +74,8 @@
         public static T? ToTree<T>(
             this IEnumerable<T>       source,
             Func<IEnumerable<T>, T?>  rootSelector,
-            Func<T, object>           idSelector,
-            Func<T, object>           parentIdSelector,
+            Func<T, object?>          idSelector,
+            Func<T, object?>          parentIdSelector,
             Action<T, IEnumerable<T>> childrenAssign)
         {
             if (source == null) throw new ArgumentNullException(nameof(source));
