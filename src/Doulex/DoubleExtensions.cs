@@ -12,6 +12,21 @@
         /// <param name="b"></param>
         /// <param name="epsilon"></param>
         /// <returns></returns>
+        public static bool AlmostEqual(this double? a, double? b, double epsilon = 0.0000001)
+        {
+            if (a is null || b is null)
+                return Equals(a, b);
+
+            return Math.Abs(a.Value - b.Value) < epsilon;
+        }
+
+        /// <summary>
+        /// Check if the double is between two values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="epsilon"></param>
+        /// <returns></returns>
         public static bool AlmostEqual(this double a, double b, double epsilon = 0.0000001)
         {
             return Math.Abs(a - b) < epsilon;
