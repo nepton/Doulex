@@ -33,7 +33,7 @@
         }
 
         /// <summary>
-        /// 如果是 NaN 则替换为默认值
+        /// If it is NaN, replace it with the default value
         /// </summary>
         /// <param name="source"></param>
         /// <param name="newValue"></param>
@@ -47,15 +47,39 @@
         }
 
         /// <summary>
-        /// 把值限制在指定的输出范围内
+        /// Limits the value to the specified output range
         /// </summary>
         /// <param name="source"></param>
         /// <param name="minimum"></param>
         /// <param name="maximum"></param>
         /// <returns></returns>
+        [Obsolete("Use Clamp instead")]
         public static double Between(this double source, double minimum, double maximum)
         {
             return Math.Max(minimum, Math.Min(maximum, source));
+        }
+
+        /// <summary>
+        /// Limits the value to the specified output range
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="minimum"></param>
+        /// <param name="maximum"></param>
+        /// <returns></returns>
+        public static double Clamp(this double source, double minimum, double maximum)
+        {
+            return Math.Max(minimum, Math.Min(maximum, source));
+        }
+
+        /// <summary>
+        /// Returns the value of the specified number rounded to the nearest value that is a multiple of the specified factor.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="digits"></param>
+        /// <returns></returns>
+        public static double Round(this double source, int digits)
+        {
+            return Math.Round(source, digits);
         }
 
         /// <summary>
