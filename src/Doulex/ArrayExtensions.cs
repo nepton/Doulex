@@ -3,7 +3,7 @@ namespace Doulex;
 /// <summary>
 /// The extension methods for enumerable
 /// </summary>
-public static class EnumerableExtensions
+public static class ArrayExtensions
 {
     /// <summary>
     /// Return null if the enumerable is empty
@@ -11,14 +11,8 @@ public static class EnumerableExtensions
     /// <param name="source"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public static IEnumerable<T>? ToNullIfEmpty<T>(this IEnumerable<T> source)
+    public static T[]? ToNullIfEmpty<T>(this T[] source)
     {
-        var enumerable = source as T[] ?? source.ToArray();
-        if (!enumerable.Any())
-        {
-            return null;
-        }
-
-        return enumerable;
+        return source.Any() ? source : null;
     }
 }
