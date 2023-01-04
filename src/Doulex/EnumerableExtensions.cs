@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace Doulex;
 
 /// <summary>
@@ -13,11 +11,8 @@ public static class EnumerableExtensions
     /// <param name="source"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public static IEnumerable<T>? ToNullIfEmpty<T>(this IEnumerable<T>? source) where T : struct
+    public static IEnumerable<T>? ToNullIfEmpty<T>(this IEnumerable<T> source)
     {
-        if (source == null)
-            return null;
-
         var enumerable = source as T[] ?? source.ToArray();
         if (!enumerable.Any())
         {
