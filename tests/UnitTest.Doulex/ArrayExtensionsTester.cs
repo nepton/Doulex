@@ -1,6 +1,8 @@
-namespace Doulex;
+using Doulex;
 
-public class EnumerableExtensionsTester
+namespace UnitTest.Doulex;
+
+public class ArrayExtensionsTester
 {
     [Fact]
     public void Test_IfNotNull_ShouldReturnSelf()
@@ -13,8 +15,8 @@ public class EnumerableExtensionsTester
     [Fact]
     public void Test_IfNull_ShouldReturnNull()
     {
-        IEnumerable<int>? source = null;
-        var               result = source.ToNullIfEmpty();
+        int[]? source = Array.Empty<int>();
+        var    result = source.ToNullIfEmpty();
         Assert.Null(result);
     }
 

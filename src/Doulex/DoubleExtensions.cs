@@ -12,12 +12,12 @@
         /// <param name="b"></param>
         /// <param name="epsilon"></param>
         /// <returns></returns>
-        public static bool AlmostEqual(this double? a, double? b, double epsilon = 0.0000001)
+        public static bool AlmostEqual(this double a, double? b, double epsilon = 0.0000001)
         {
-            if (a is null || b is null)
+            if (b == null)
                 return Equals(a, b);
 
-            return Math.Abs(a.Value - b.Value) < epsilon;
+            return Math.Abs(a - b.Value) < epsilon;
         }
 
         /// <summary>
@@ -27,9 +27,12 @@
         /// <param name="b"></param>
         /// <param name="epsilon"></param>
         /// <returns></returns>
-        public static bool AlmostEqual(this double a, double b, double epsilon = 0.0000001)
+        public static bool AlmostEqual(this double? a, double? b, double epsilon = 0.0000001)
         {
-            return Math.Abs(a - b) < epsilon;
+            if (a == null || b == null)
+                return Equals(a, b);
+
+            return Math.Abs(a.Value - b.Value) < epsilon;
         }
 
         /// <summary>
@@ -53,22 +56,13 @@
         /// <param name="minimum"></param>
         /// <param name="maximum"></param>
         /// <returns></returns>
-        [Obsolete("Use Clamp instead")]
-        public static double Between(this double source, double minimum, double maximum)
-        {
-            return Math.Max(minimum, Math.Min(maximum, source));
-        }
-
-        /// <summary>
-        /// Limits the value to the specified output range
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="minimum"></param>
-        /// <param name="maximum"></param>
-        /// <returns></returns>
         public static double Clamp(this double source, double minimum, double maximum)
         {
+#if NETSTANDARD2_1_OR_GREATER
+            return Math.Clamp(source, minimum, maximum);
+#else
             return Math.Max(minimum, Math.Min(maximum, source));
+#endif
         }
 
         /// <summary>
@@ -93,7 +87,7 @@
         /// <returns></returns>
         public static string ToZippedString(this double value, int? digits = null, int? minimumFolds = null, int? maximumFolds = null)
         {
-            string[] greatThanOne = {"", "K", "M", "G", "T", "P", "E", "Z", "Y"};
+            string[] greatThanOne = {"", "k", "M", "G", "T", "P", "E", "Z", "Y"};
             string[] lessThanOne  = {"", "m", "u", "n", "p", "f", "a", "z", "y"};
 
             // 设置限制值的范围, 例如限制了转换值 1e6 -- 1e12 则从 M -- T 之间转换
