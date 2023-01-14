@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Doulex.Text
+namespace Doulex
 {
     /// <summary>
     /// The extension methods for the String class.

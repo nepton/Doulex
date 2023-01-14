@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace Doulex.Linq;
+namespace Doulex;
 
 /// <summary>
 /// Queryable extension
