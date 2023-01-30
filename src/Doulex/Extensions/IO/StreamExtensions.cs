@@ -9,10 +9,11 @@ public static class StreamExtensions
     /// Read all bytes from the stream
     /// </summary>
     /// <param name="stream"></param>
+    /// <param name="cancel"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="ArgumentException"></exception>
-    public static async Task<byte[]> ReadAllBytesAsync(this Stream stream)
+    public static async Task<byte[]> ReadAllBytesAsync(this Stream stream, CancellationToken cancel = default)
     {
         if (stream == null)
             throw new ArgumentNullException(nameof(stream));
@@ -30,7 +31,7 @@ public static class StreamExtensions
         var position = 0;
         while (position < buffer.Length)
         {
-            var read = await stream.ReadAsync(buffer, position, buffer.Length - position);
+            var read = await stream.ReadAsync(buffer, position, buffer.Length - position, cancel);
 
             if (read == 0)
                 break;
