@@ -45,10 +45,25 @@ namespace Doulex
         /// <returns></returns>
         public static string Text<TEnum>(this TEnum source) where TEnum : Enum
         {
-            // todo 未来格式支持自定义
             var type = source.GetType();
-            var attr = _dictEnumTextResources.GetOrAdd(type, t => t.GetCustomAttribute<EnumTextResourceAttribute>());
-            return attr?.ResourceManager.GetString($"{type.Name}_{source}") ?? source.ToString();
+
+            // Read text from EnumTextAttribute that declare in enum field
+            var fieldAttr = type.GetField(source.ToString()).GetCustomAttribute<EnumTextAttribute>();
+            if (fieldAttr != null)
+            {
+                return fieldAttr.Text;
+            }
+
+            // Try read text from EnumTextResourceAttribute declare in enum type
+            var enumAttr = _dictEnumTextResources.GetOrAdd(type, t => t.GetCustomAttribute<EnumTextResourceAttribute>());
+            if (enumAttr != null)
+            {
+                var text = enumAttr.ResourceManager.GetString($"{type.Name}_{source}");
+                if (!string.IsNullOrEmpty(text))
+                    return text;
+            }
+
+            return source.ToString();
         }
     }
 }

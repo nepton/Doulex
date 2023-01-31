@@ -26,4 +26,19 @@
       <ProjectReference Include="..\..\src\Doulex\Doulex.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="Extensions\I18n.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>I18n.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Extensions\I18n.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>I18n.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

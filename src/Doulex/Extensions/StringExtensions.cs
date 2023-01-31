@@ -6,13 +6,13 @@
     public static class StringExtensions
     {
         /// <summary>
-        /// 将字符串的 0x0 字符用“空格”替代，然后剪切前后空格
+        /// Trim all '\0' to empty
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
         public static string TrimNull(this string str)
         {
-            return (str.Replace('\0', ' ')).Trim();
+            return str.Replace("\0", "");
         }
 
         /// <summary>
@@ -57,6 +57,16 @@
                 return null;
 
             return source;
+        }
+
+        /// <summary>
+        /// Indicate that the source is null or empty string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static bool IsNullOrEmpty(this string? source)
+        {
+            return string.IsNullOrEmpty(source);
         }
     }
 }
