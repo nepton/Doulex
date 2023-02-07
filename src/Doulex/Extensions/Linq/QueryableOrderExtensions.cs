@@ -26,5 +26,25 @@ namespace Doulex
 
             return source.OrderByDescending(keySelector);
         }
+
+        /// <summary>
+        /// Order the query
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="keySelector"></param>
+        /// <param name="isAscending"></param>
+        /// <typeparam name="TSource"></typeparam>
+        /// <typeparam name="TKey"></typeparam>
+        /// <returns></returns>
+        public static IOrderedQueryable<TSource> ThenBy<TSource, TKey>(
+            this IOrderedQueryable<TSource> source,
+            Expression<Func<TSource, TKey>> keySelector,
+            bool                            isAscending)
+        {
+            if (isAscending)
+                return source.ThenBy(keySelector);
+
+            return source.ThenByDescending(keySelector);
+        }
     }
 }
