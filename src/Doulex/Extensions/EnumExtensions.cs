@@ -65,5 +65,19 @@ namespace Doulex
 
             return source.ToString();
         }
+
+        /// <summary>
+        /// Converts a string to an enumeration
+        /// </summary>
+        /// <param name="value"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T? ToEnum<T>(this string? value) where T : struct
+        {
+            if (value == null)
+                return null;
+
+            return Enum.TryParse<T>(value, out var result) ? result : null;
+        }
     }
 }
