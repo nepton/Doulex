@@ -1,4 +1,7 @@
-﻿namespace Doulex
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace Doulex
 {
     /// <summary>
     /// The extension of string
@@ -67,6 +70,50 @@
         public static bool IsNullOrEmpty(this string? source)
         {
             return string.IsNullOrEmpty(source);
+        }
+
+        /// <summary>
+        /// Convert string to hash guid
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static Guid ToHashedGuid(this string source)
+        {
+            if (source == null) throw new ArgumentNullException(nameof(source));
+
+            using var calc = MD5.Create();
+            var       hash = calc.ComputeHash(Encoding.UTF8.GetBytes(source));
+            return new Guid(hash);
+        }
+
+        /// <summary>
+        /// Convert string to guid
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static Guid ToGuid(this string source)
+        {
+            return new Guid(source);
+        }
+
+        /// <summary>
+        /// Convert string to base64 string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string ToBase64(this string source)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(source));
+        }
+
+        /// <summary>
+        /// Convert base64 string to string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string FromBase64(this string source)
+        {
+            return Encoding.UTF8.GetString(Convert.FromBase64String(source));
         }
     }
 }

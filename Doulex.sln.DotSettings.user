@@ -10,18 +10,7 @@
   &lt;Project Location="D:\Project\Doulex\Doulex\tests\UnitTest.Doulex" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;UnitTest.Doulex&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5d9775d_002D64b0_002D4808_002Da007_002Dcf00fd8e1be8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAlmostEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DoubleExtensionsTester.TestAlmostEqual&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DisposeTrackingTests.TestSyncedDisposable&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Collections.TreeExtensionsTests.ToTree_WhenCalled_ReturnsTree&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.DoubleExtensionsTester.TestNullableAlmostEqual&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.ArrayExtensionsTester&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Collections.EnumerableExtensionsTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Extensions.IO.StreamExtensionsTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Extensions.EnumExtensionsTester.Text_WhenInvokeRed_ShouldReturnRED&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Extensions.EnumExtensionsTester.Text_WhenInvoke_ShouldReturn&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::21BF4ABB-D84B-4E1D-91E0-C873484FEF13::net6.0::UnitTest.Doulex.Extensions.StringExtensionsTester&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="D:\Project\Doulex\Doulex\tests\UnitTest.Doulex" Presentation="&amp;lt;tests&amp;gt;\&amp;lt;UnitTest.Doulex&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FDoulex_002EPinyin_002FPinyinResource/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
