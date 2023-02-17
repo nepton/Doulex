@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Doulex
@@ -67,7 +68,12 @@ namespace Doulex
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static bool IsNullOrEmpty(this string? source)
+        public static bool IsNullOrEmpty(
+#if NETSTANDARD2_1_OR_GREATER
+            [NotNullWhen(false)]
+#endif
+            this string? source
+        )
         {
             return string.IsNullOrEmpty(source);
         }
