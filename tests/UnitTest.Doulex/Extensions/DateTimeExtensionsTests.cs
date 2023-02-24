@@ -28,4 +28,30 @@ public class DateTimeExtensionsTests
         Assert.Equal(new DateTime(2020, 2, 1),                     start);
         Assert.Equal(new DateTime(2020, 3, 1).AddMilliseconds(-1), end);
     }
+
+    [Fact]
+    public void FirstDayOfMonth_ReturnsCorrectDate()
+    {
+        // Arrange
+        var date = new DateTime(2022, 2, 15);
+
+        // Act
+        var result = date.FirstDayOfMonth();
+
+        // Assert
+        Assert.Equal(new DateTime(2022, 2, 1), result);
+    }
+
+    [Fact]
+    public void FirstDayOfYear_ReturnsCorrectDate()
+    {
+        // Arrange
+        var date = new DateTime(2022, 2, 15);
+
+        // Act
+        var result = date.FirstDayOfYear();
+
+        // Assert
+        Assert.Equal(new DateTime(2022, 1, 1), result);
+    }
 }

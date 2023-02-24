@@ -6,7 +6,7 @@
     public static class DateTimeExtensions
     {
         /// <summary>
-        /// 获取指定日期所在月份的值
+        /// Returns the range of the month for the specified date.
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
@@ -16,6 +16,26 @@
             var end   = start.AddMonths(1).AddMilliseconds(-1);
 
             return (start, end);
+        }
+
+        /// <summary>
+        /// Returns the last day of the month for the specified date.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static DateTime FirstDayOfMonth(this DateTime source)
+        {
+            return new DateTime(source.Year, source.Month, 1);
+        }
+
+        /// <summary>
+        /// Returns the first day of the year for the specified date.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static DateTime FirstDayOfYear(this DateTime source)
+        {
+            return new DateTime(source.Year, 1, 1);
         }
     }
 }
