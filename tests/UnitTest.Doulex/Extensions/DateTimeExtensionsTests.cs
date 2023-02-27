@@ -54,4 +54,34 @@ public class DateTimeExtensionsTests
         // Assert
         Assert.Equal(new DateTime(2022, 1, 1), result);
     }
+
+    [Fact]
+    public void AsUniversalTime_Returns_UTC()
+    {
+        // Arrange
+        var localTime = new DateTime(2023,            2, 27, 10, 0, 0, DateTimeKind.Local);
+        var expected  = new DateTime(localTime.Ticks, DateTimeKind.Utc);
+
+        // Act
+        var actual = localTime.AsUniversalTime();
+
+        // Assert
+        Assert.Equal(expected,         actual);
+        Assert.Equal(DateTimeKind.Utc, actual.Kind);
+    }
+
+    [Fact]
+    public void AsLocalTime_Returns_Local_Time()
+    {
+        // Arrange
+        var utcTime  = new DateTime(2023,          2, 27, 10, 0, 0, DateTimeKind.Utc);
+        var expected = new DateTime(utcTime.Ticks, DateTimeKind.Local);
+
+        // Act
+        var actual = utcTime.AsLocalTime();
+
+        // Assert
+        Assert.Equal(expected,           actual);
+        Assert.Equal(DateTimeKind.Local, actual.Kind);
+    }
 }

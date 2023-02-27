@@ -37,5 +37,27 @@
         {
             return new DateTime(source.Year, 1, 1);
         }
+
+        /// <summary>
+        /// Just change the timezone to UTC, keep the time unchanged.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static DateTime AsUniversalTime(this DateTime source)
+        {
+            // change the timezone to UTC
+            return new DateTime(source.Ticks, DateTimeKind.Utc);
+        }
+
+        /// <summary>
+        /// Just change the timezone to local, keep the time unchanged.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static DateTime AsLocalTime(this DateTime source)
+        {
+            // change the timezone to local
+            return new DateTime(source.Ticks, DateTimeKind.Local);
+        }
     }
 }
