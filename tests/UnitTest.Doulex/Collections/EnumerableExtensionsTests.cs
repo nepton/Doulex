@@ -8,7 +8,7 @@ public class EnumerableExtensionsTests
     public void IsNullOrEmpty_WithNullEnumerable_ReturnsTrue()
     {
         IEnumerable<int>? enumerable = null;
-        var               result     = enumerable.IsNullOrEmpty();
+        var               result     = enumerable.IsEnumerableNullOrEmpty();
         Assert.True(result);
     }
 
@@ -16,7 +16,7 @@ public class EnumerableExtensionsTests
     public void IsNullOrEmpty_WithEmptyEnumerable_ReturnsTrue()
     {
         IEnumerable<int> enumerable = Enumerable.Empty<int>();
-        var              result     = enumerable.IsNullOrEmpty();
+        var              result     = enumerable.IsEnumerableNullOrEmpty();
         Assert.True(result);
     }
 
@@ -24,7 +24,7 @@ public class EnumerableExtensionsTests
     public void IsNullOrEmpty_WithNonEmptyEnumerable_ReturnsFalse()
     {
         IEnumerable<int> enumerable = Enumerable.Range(1, 10);
-        var              result     = enumerable.IsNullOrEmpty();
+        var              result     = enumerable.IsEnumerableNullOrEmpty();
         Assert.False(result);
     }
 }

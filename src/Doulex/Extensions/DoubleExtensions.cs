@@ -50,6 +50,19 @@
         }
 
         /// <summary>
+        /// If it is NaN, replace it with null
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static double? ReplaceToNullIfNaN(this double source)
+        {
+            if (double.IsNaN(source))
+                return null;
+
+            return source;
+        }
+
+        /// <summary>
         /// Limits the value to the specified output range
         /// </summary>
         /// <param name="source"></param>

@@ -14,8 +14,8 @@ public static class EnumerableExtensions
     /// <param name="enumerable">The collection to check.</param>
     /// <returns>True if collection is null or empty, false otherwise.</returns>
 #if NETSTANDARD2_1_OR_GREATER
-    public static bool IsNullOrEmpty<T>([NotNullWhen(false)] this IEnumerable<T>? enumerable) => enumerable == null || !enumerable.Any();
+    public static bool IsEnumerableNullOrEmpty<T>([NotNullWhen(false)] this IEnumerable<T>? enumerable) => enumerable == null || !enumerable.Any();
 #else
-    public static bool IsNullOrEmpty<T>(this IEnumerable<T>? enumerable) => enumerable == null || !enumerable.Any();
+    public static bool IsEnumerableNullOrEmpty<T>(this IEnumerable<T>? enumerable) => enumerable == null || !enumerable.Any();
 #endif
 }
