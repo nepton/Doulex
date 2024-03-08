@@ -1,7 +1,5 @@
-using System.Security.AccessControl;
 using Doulex.Collections;
 using FluentAssertions;
-using Microsoft.VisualBasic;
 
 namespace UnitTest.Doulex.Collections;
 
@@ -12,17 +10,17 @@ public class TreeExtensionsTests
     public void ToTree_WhenCalled_ReturnsTree()
     {
         // Arrange
-        var root    = new Node {Id = Guid.NewGuid(), ParentId = default};
-        var child1  = new Node {Id = Guid.NewGuid(), ParentId = root.Id};
-        var child2  = new Node {Id = Guid.NewGuid(), ParentId = root.Id};
-        var child3  = new Node {Id = Guid.NewGuid(), ParentId = child1.Id};
-        var child4  = new Node {Id = Guid.NewGuid(), ParentId = child1.Id};
-        var child5  = new Node {Id = Guid.NewGuid(), ParentId = child2.Id};
-        var child6  = new Node {Id = Guid.NewGuid(), ParentId = child2.Id};
-        var child7  = new Node {Id = Guid.NewGuid(), ParentId = child3.Id};
-        var child8  = new Node {Id = Guid.NewGuid(), ParentId = child3.Id};
-        var child9  = new Node {Id = Guid.NewGuid(), ParentId = child4.Id};
-        var child10 = new Node {Id = Guid.NewGuid(), ParentId = child4.Id};
+        var root    = new Node { Id = Guid.NewGuid(), ParentId = default };
+        var child1  = new Node { Id = Guid.NewGuid(), ParentId = root.Id };
+        var child2  = new Node { Id = Guid.NewGuid(), ParentId = root.Id };
+        var child3  = new Node { Id = Guid.NewGuid(), ParentId = child1.Id };
+        var child4  = new Node { Id = Guid.NewGuid(), ParentId = child1.Id };
+        var child5  = new Node { Id = Guid.NewGuid(), ParentId = child2.Id };
+        var child6  = new Node { Id = Guid.NewGuid(), ParentId = child2.Id };
+        var child7  = new Node { Id = Guid.NewGuid(), ParentId = child3.Id };
+        var child8  = new Node { Id = Guid.NewGuid(), ParentId = child3.Id };
+        var child9  = new Node { Id = Guid.NewGuid(), ParentId = child4.Id };
+        var child10 = new Node { Id = Guid.NewGuid(), ParentId = child4.Id };
 
         var nodes = new List<Node>
         {
@@ -63,5 +61,5 @@ public class Node
 {
     public Guid   Id       { get; set; }
     public Guid   ParentId { get; set; }
-    public Node[] Children { get; set; }
+    public Node[] Children { get; set; } = [];
 }

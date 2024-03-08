@@ -58,6 +58,8 @@ namespace UnitTest.Doulex.Collections
             // Assert
             var expectedArray = new[] { 1, 2, 3 };
             Assert.Equal(expectedArray, resultList);
+            
+            enumerator.Dispose();
         }
 
         [Fact]
